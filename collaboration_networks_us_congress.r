@@ -1,3 +1,5 @@
+#With thanks to S Munzert, C Rubba, P Meißner, D Nyhuis, Automated data collection with R: A practical guide to web scraping and text mining
+
 #Helper function to extract the names of legislators
 
 clean_string <- function(s){
