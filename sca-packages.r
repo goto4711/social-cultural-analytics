@@ -31,4 +31,4 @@ packages3 <- c("ggmap", "rworldmap", "jsonlite", "rworldmap", "googleVis", "magr
 ipak(packages3)
 
 packages4 <- c("arules", "Rfacebook", "ggvis", "shiny", "ggprel", "recommenderlab", "rpart")
-ipak(packages3)
+ipak(packages4)
