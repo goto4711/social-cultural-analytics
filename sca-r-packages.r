@@ -30,5 +30,5 @@ install.packages(ngram_url, repos = NULL, type = "source")
 packages3 <- c("ggmap", "rworldmap", "jsonlite", "rworldmap", "googleVis", "magrittr", "dplyr")
 ipak(packages3)
 
-packages4 <- c("arules", "Rfacebook", "ggvis", "shiny", "ggprel", "recommenderlab", "rpart")
+packages4 <- c("arules", "Rfacebook", "ggvis", "shiny", "recommenderlab", "rpart")
 ipak(packages4)
