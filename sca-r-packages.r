@@ -7,13 +7,11 @@ ipak <- function(pkg){
     sapply(pkg, require, character.only = TRUE)
 }
 
-#Get the Hadleyverse
-ipak("devtools")
-library(devtools)
-install_github("imanuelcostigan/hadleyverse")
-library(hadleyverse)
-load_the_hadley_verse()
+#Get the Tidyverse
+	
+tidy_pack <- c("devtools", "tidyverse", "stringr", "plyr", "lubridate")
 
+ipak(tidy_pack)
 
 packages <- c("RColorBrewer", "NeuralNetTools", "RedditExtractoR", "XML", "catdata",
 				"corrplot", "cluster", "ggplot2", "h2o", "httr",
