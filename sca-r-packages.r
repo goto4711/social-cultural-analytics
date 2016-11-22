@@ -32,3 +32,5 @@ ipak(packages3)
 
 packages4 <- c("arules", "Rfacebook", "ggvis", "shiny", "recommenderlab", "rpart")
 ipak(packages4)
+
+rm(list=ls())
