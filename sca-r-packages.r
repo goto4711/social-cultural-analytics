@@ -18,10 +18,10 @@ packages <- c("RColorBrewer", "NeuralNetTools", "RedditExtractoR", "XML", "catda
 				"jpeg", "maps", "nnet", "reshape2")
 ipak(packages)	
 
-slam_url <- "http://cran.r-project.org/src/contrib/Archive/slam/slam_0.1-37.tar.gz" 
-install.packages(slam_url, repos = NULL, type = "source")			
+#slam_url <- "http://cran.r-project.org/src/contrib/Archive/slam/slam_0.1-37.tar.gz" 
+#install.packages(slam_url, repos = NULL, type = "source")			
 				
-packages2 <- c("tm", "topicmodels", "twitteR", "wordcloud", "igraph")
+packages2 <- c("slam", "tm", "topicmodels", "twitteR", "wordcloud", "igraph")
 ipak(packages2)				
 
 ngram_url <- "http://cran.r-project.org/src/contrib/Archive/ngramr/ngramr_1.4.5.tar.gz"
