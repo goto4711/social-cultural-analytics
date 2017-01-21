@@ -38,7 +38,8 @@ BigramTokenizer <- function(x) {
 
 clean_tweets <- function(st, txt) {
 	txt <- iconv(txt, 'UTF-8', 'ASCII')
-	#txt <- gsub("\\b[a-zA-Z0-9]{1,2}\\b", "", txt) # replace words shorter than 3
+	txt <- gsub("\\b[a-zA-Z0-9]{1,2}\\b", "", txt) # replace words shorter than 2
 	#txt <- gsub("\\b[a-zA-Z0-9]{10,}\\b", "", txt) # replace words longer than 10
-	return (corpus)
+	return (txt)
 }
+
