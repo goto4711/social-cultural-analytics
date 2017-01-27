@@ -60,13 +60,14 @@ colnames(sponsor_matrix) <- all_sponsors_cosponsors
 rownames(sponsor_matrix) <- all_bills
 
 for(i in 1:length(bill_sponsors_list)){
-    print(i)
+    tryCatch({
     sponsor_matrix[i, which(all_sponsors_cosponsors == bill_sponsors_list[[i]]$sponsor)] <- "Sponsor"
     if(length(bill_sponsors_list[[i]]$cosponsors) > 0){
     	for(j in 1:length(bill_sponsors_list[[i]]$cosponsors)){
             sponsor_matrix[i, which(all_sponsors_cosponsors == bill_sponsors_list[[i]]$cosponsors[j])] <- "Cosponsor"
         }
 	}
+       }, error=function(e){})
 }
 
 #get bios from http://bioguide.congress.gov/biosearch/biosearch1.asp
