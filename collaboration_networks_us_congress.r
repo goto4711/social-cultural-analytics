@@ -19,23 +19,22 @@ sparse_sponsors <- list()
 for (i in 1:length(all_files))  {
     tryCatch({ 
     	f <- str_c(bill_dir, all_files[i])
-	print(f)
     	b <- gsub(pattern = "\\.html$", "", basename(f))
-   		html_f <- read_html(f)
+   	html_f <- read_html(f)
     	#Sponsors
     	s_t <- html_nodes(html_f, xpath = '//*[@id="content"]/div[1]/div[4]/div[1]/table')
-		s_t <- as.data.frame(html_table(s_t))[1,2]
-		s <- clean_string(s_t)
-		#Cosponsors
+	s_t <- as.data.frame(html_table(s_t))[1,2]
+	s <- clean_string(s_t)
+	#Cosponsors
     	c_t <- html_nodes(html_f, xpath = '//*[@id="content"]/div[24]/table')
     	c_t <- as.data.frame(html_table(c_t, fill = TRUE))
-		c <- clean_string(c_t$Cosponsor)
+	c <- clean_string(c_t$Cosponsor)
     	bill_sponsors_list[[i]] <- list(bill = b, sponsor = s, cosponsors = c)
     	sparse_sponsors[[i]] <- c(s, c)
     	},
         error=function(cond) {
             #message("Here's the original error message:")
-            #message(cond)
+            message(cond)
         	#print(i)
         }
     )   
