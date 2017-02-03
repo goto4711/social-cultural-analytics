@@ -21,13 +21,13 @@ ipak(packages)
 #slam_url <- "http://cran.r-project.org/src/contrib/Archive/slam/slam_0.1-37.tar.gz" 
 #install.packages(slam_url, repos = NULL, type = "source")			
 				
-packages2 <- c("slam", "tm", "topicmodels", "twitteR", "wordcloud", "igraph")
+packages2 <- c("slam", "tm", "topicmodels", "twitteR", "wordcloud", "igraph", "hexbin")
 ipak(packages2)				
 
 ngram_url <- "http://cran.r-project.org/src/contrib/Archive/ngramr/ngramr_1.4.5.tar.gz"
 install.packages(ngram_url, repos = NULL, type = "source")
 
-packages3 <- c("ggmap", "rworldmap", "jsonlite", "rworldmap", "googleVis", "magrittr", "dplyr")
+packages3 <- c("ggmap", "rworldmap", "jsonlite", "rworldmap", "googleVis", "magrittr", "dplyr", "ggrepel")
 ipak(packages3)
 
 packages4 <- c("arules", "Rfacebook", "ggvis", "shiny", "recommenderlab", "rpart")
