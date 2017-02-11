@@ -142,14 +142,14 @@ network_congress <- function() {
 	adj_sponsor <- get.adjacency(sponsor_network)
 
 	#Find strong collaborators
-	min(sort(adj_sponsor, decreasing = TRUE)[1:10])
-	max_indices <- which(adj_sponsor >= min(sort(adj_sponsor, decreasing = TRUE)[1:10]), arr.in = T)
-	export_names <- matrix(NA, ncol = 2, nrow = 10)
+	#min(sort(adj_sponsor, decreasing = TRUE)[1:10])
+	#max_indices <- which(adj_sponsor >= min(sort(adj_sponsor, decreasing = TRUE)[1:10]), arr.in = T)
+	#export_names <- matrix(NA, ncol = 2, nrow = 10)
 
-	for(i in 1:nrow(max_indices)){
-    	export_names[i, 1] <- rownames(adj_sponsor)[max_indices[i,1]]
-    	export_names[i, 2] <- colnames(adj_sponsor)[max_indices[i,2]]
-	}
+	#for(i in 1:nrow(max_indices)){
+    	#export_names[i, 1] <- rownames(adj_sponsor)[max_indices[i,1]]
+    	#export_names[i, 2] <- colnames(adj_sponsor)[max_indices[i,2]]
+	#}
 	
 	#Simplify network
 	E(sponsor_network)$weight <- 1
