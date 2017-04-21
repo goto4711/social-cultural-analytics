@@ -33,7 +33,7 @@ ipak(packages3)
 packages4 <- c("arules", "Rfacebook", "ggvis", "shiny", "recommenderlab", "rpart")
 ipak(packages4)
 
-packages5 <- c("plyr","readr","maptools","GISTools","raster","tmap","OpenStreetMap","ggmap")
+packages5 <- c("plyr","readr","maptools","GISTools","raster","tmap","OpenStreetMap","ggmap", "spatstat")
 ipak(packages5)	
 
 packages6 <- c("gsheet","likert","MASS","fitdistrplus")
