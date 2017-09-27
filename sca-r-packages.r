@@ -36,7 +36,7 @@ ipak(packages4)
 packages5 <- c("plyr","readr","maptools","GISTools","raster","tmap","OpenStreetMap","ggmap", "spatstat")
 ipak(packages5)	
 
-packages6 <- c("gsheet","likert","MASS","fitdistrplus", "GISTools", "raster", "spatstat", "tmap")
+packages6 <- c("gsheet","likert","MASS","fitdistrplus")
 ipak(packages6)	
 
 packages7 <- c("gapminder","lubridate","imputeTS","forecast", "xts","Pageviews")
@@ -55,7 +55,19 @@ if(length(new.packages)) {
      devtools::install_github('twitter/AnomalyDetection')
 }
 
+list.of.packages <- c("scaddh")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) {
+     devtools::install_github('goto4711/scaddh')
+}
 
- 
+
+list.of.packages <- c("gganimate")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) {
+     devtools::install_github('dgrtwo/gganimate')
+}
+
+
 	
 rm(list=ls())
