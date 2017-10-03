@@ -21,7 +21,7 @@ ipak(packages)
 #slam_url <- "http://cran.r-project.org/src/contrib/Archive/slam/slam_0.1-37.tar.gz" 
 #install.packages(slam_url, repos = NULL, type = "source")			
 				
-packages2 <- c("slam", "tm", "topicmodels", "twitteR", "wordcloud", "igraph", "hexbin")
+packages2 <- c("slam", "tm", "topicmodels", "twitteR", "wordcloud", "igraph", "hexbin", "countrycode")
 ipak(packages2)				
 
 ngram_url <- "http://cran.r-project.org/src/contrib/Archive/ngramr/ngramr_1.4.5.tar.gz"
@@ -39,7 +39,7 @@ ipak(packages5)
 packages6 <- c("gsheet","likert","MASS","fitdistrplus")
 ipak(packages6)	
 
-packages7 <- c("gapminder","lubridate","imputeTS","forecast", "xts","Pageviews")
+packages7 <- c("gapminder","lubridate","imputeTS","forecast", "xts", "Pageviews")
 ipak(packages)	
 
 
