@@ -1,73 +1,49 @@
 #source_url devtools
 
 ipak <- function(pkg){
-    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
-    if (length(new.pkg)) 
-        install.packages(new.pkg, dependencies = TRUE)
-    sapply(pkg, require, character.only = TRUE)
+  new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+  if (length(new.pkg)) 
+    install.packages(new.pkg, dependencies = TRUE)
+  sapply(pkg, require, character.only = TRUE)
 }
 
 #Get the Tidyverse
-	
+
 tidy_pack <- c("devtools", "tidyverse", "stringr", "plyr", "lubridate")
 
 ipak(tidy_pack)
 
-packages <- c("RColorBrewer", "NeuralNetTools", "RedditExtractoR", "XML", "catdata",
-				"corrplot", "cluster", "ggplot2", "h2o", "httr",
-				"jpeg", "maps", "nnet", "reshape2")
-ipak(packages)	
+#Retrieve from dockerfile:
+#Replace leading white spaces with nothing
+#Replace whitespace + \ with ",
+#Switch to grep mode and replace \n with empty space
 
-#slam_url <- "http://cran.r-project.org/src/contrib/Archive/slam/slam_0.1-37.tar.gz" 
-#install.packages(slam_url, repos = NULL, type = "source")			
-				
-packages2 <- c("slam", "tm", "topicmodels", "twitteR", "wordcloud", "igraph", "hexbin", "countrycode")
-ipak(packages2)				
+course_packages <- c("GISTools", "OpenStreetMap", "NeuralNetTools", "NeuralNetTools", "RColorBrewer", "RedditExtractoR", "Rfacebook", "XML", "arules", "catdata", "cluster", "corrplot", "devtools", "dplyr", "fitdistrplus", "gapminder", "ggmap", "ggplot2", "ggraph", "ggrepel", "ggvis", "googleVis", "graphTweets", "gsheet", "gtrendsR", "gutenbergr", "httr", "imputeTS", "igraph", "jpeg", "jsonlite", "lubridate", "magrittr", "maps", "nnet", "pageviews", "plotly", "quanteda", "raster", "recommenderlab", "reshape2", "rpart", "rtweet", "rworldmap", "shiny", "spatstat", "swirl", "tidytext", "tm", "tmap", "topicmodels", "twitteR", "wikipediatrend", "wordcloud", "xts")
 
-ngram_url <- "http://cran.r-project.org/src/contrib/Archive/ngramr/ngramr_1.4.5.tar.gz"
-install.packages(ngram_url, repos = NULL, type = "source")
+ipak(course_packages)
 
-packages3 <- c("ggmap", "rworldmap", "jsonlite", "rworldmap", "googleVis", "magrittr", "dplyr", "ggrepel")
-ipak(packages3)
+#Source packages
 
-packages4 <- c("arules", "Rfacebook", "ggvis", "shiny", "recommenderlab", "rpart", "quanteda", "qdap")
-ipak(packages4)
-
-packages5 <- c("plyr","readr","maptools","GISTools","raster","tmap","OpenStreetMap","ggmap", "spatstat")
-ipak(packages5)	
-
-packages6 <- c("gsheet","likert","MASS","fitdistrplus")
-ipak(packages6)	
-
-packages7 <- c("gapminder","lubridate","imputeTS","forecast", "xts", "Pageviews")
-ipak(packages)	
+install.packages("h2o", type="source", repos=(c("http://h2o-release.s3.amazonaws.com/h2o/latest_stable_R")))
 
 
-list.of.packages <- c("gtrendsR")
+list.of.packages <- c("gtrendsR", "likert", "forecast", "pageviews", "AnomalyDetection", "gganimate", "gtrendsR", "qdapDictionaries", "qdapRegex", "qdapTools", "qdap")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) {
-     devtools::install_github('PMassicotte/gtrendsR')
+  require(devtools)
+  install_github("jbryer/likert")
+  install_github("robjhyndman/forecast")
+  install_github("ironholds/pageviews")
+  install_github("twitter/AnomalyDetection")
+  install_github("dgrtwo/gganimate")
+  install_github("PMassicotte/gtrendsR")
+  install_github("trinker/qdapDictionaries")
+  install_github("trinker/qdapRegex")
+  install_github("trinker/qdapTools")
+  #install_github("trinker/qdap")   
+  install_github("goto4711/scaddh")
 }
 
-list.of.packages <- c("AnomalyDetection")
-new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-if(length(new.packages)) {
-     devtools::install_github('twitter/AnomalyDetection')
-}
+ipak('qdap')
 
-list.of.packages <- c("scaddh")
-new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-if(length(new.packages)) {
-     devtools::install_github('goto4711/scaddh')
-}
-
-
-list.of.packages <- c("gganimate")
-new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-if(length(new.packages)) {
-     devtools::install_github('dgrtwo/gganimate')
-}
-
-
-	
 rm(list=ls())
