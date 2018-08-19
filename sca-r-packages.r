@@ -27,7 +27,7 @@ ipak(course_packages)
 install.packages("h2o", type="source", repos=(c("http://h2o-release.s3.amazonaws.com/h2o/latest_stable_R")))
 
 
-list.of.packages <- c("gtrendsR", "likert", "forecast", "pageviews", "AnomalyDetection", "gganimate", "gtrendsR", "qdapDictionaries", "qdapRegex", "qdapTools", "qdap")
+list.of.packages <- c("Rgraphviz", "gtrendsR", "likert", "forecast", "pageviews", "AnomalyDetection", "gganimate", "gtrendsR", "qdapDictionaries", "qdapRegex", "qdapTools", "qdap")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) {
   require(devtools)
@@ -42,8 +42,11 @@ if(length(new.packages)) {
   install_github("trinker/qdapTools")
   #install_github("trinker/qdap")   
   install_github("goto4711/scaddh")
+  source("https://bioconductor.org/biocLite.R")
+  biocLite("Rgraphviz")
 }
 
 ipak('qdap')
 
 rm(list=ls())
+.rs.restartR()
