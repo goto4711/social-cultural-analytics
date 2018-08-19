@@ -32,7 +32,6 @@ new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"
 if(length(new.packages)) {
   require(devtools)
   install_github("jbryer/likert")
-  #install_github("robjhyndman/forecast")
   install_github("ironholds/pageviews")
   install_github("twitter/AnomalyDetection")
   install_github("dgrtwo/gganimate")
