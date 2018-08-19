@@ -18,7 +18,7 @@ ipak("tidyverse")
 #Replace whitespace + \ with ",
 #Switch to grep mode and replace \n with empty space
 
-course_packages <- c("GISTools", "OpenStreetMap", "NeuralNetTools", "NeuralNetTools", "RColorBrewer", "RedditExtractoR", "Rfacebook", "XML", "arules", "catdata", "cluster", "corrplot", "devtools", "dplyr", "fitdistrplus", "gapminder", "ggmap", "ggplot2", "ggraph", "ggrepel", "ggvis", "googleVis", "graphTweets", "gsheet", "gtrendsR", "gutenbergr", "httr", "imputeTS", "igraph", "jpeg", "jsonlite", "lubridate", "magrittr", "maps", "nnet", "pageviews", "plotly", "quanteda", "raster", "recommenderlab", "reshape2", "rpart", "rtweet", "rworldmap", "shiny", "spatstat", "swirl", "tidytext", "tm", "tmap", "topicmodels", "twitteR", "wikipediatrend", "wordcloud", "xts", "MASS", "mlogit", "caret", "survival")
+course_packages <- c("GISTools", "OpenStreetMap", "NeuralNetTools", "NeuralNetTools", "RColorBrewer", "RedditExtractoR", "Rfacebook", "XML", "arules", "catdata", "cluster", "corrplot", "devtools", "dplyr", "fitdistrplus", "forecast", "gapminder", "ggmap", "ggplot2", "ggraph", "ggrepel", "ggvis", "googleVis", "graphTweets", "gsheet", "gtrendsR", "gutenbergr", "httr", "imputeTS", "igraph", "jpeg", "jsonlite", "lubridate", "magrittr", "maps", "nnet", "pageviews", "plotly", "quanteda", "raster", "recommenderlab", "reshape2", "rpart", "rtweet", "rworldmap", "shiny", "spatstat", "swirl", "tidytext", "tm", "tmap", "topicmodels", "twitteR", "wikipediatrend", "wordcloud", "xts", "MASS", "mlogit", "caret", "survival")
 
 ipak(course_packages)
 
@@ -27,12 +27,12 @@ ipak(course_packages)
 install.packages("h2o", type="source", repos=(c("http://h2o-release.s3.amazonaws.com/h2o/latest_stable_R")))
 
 
-list.of.packages <- c("Rgraphviz", "gtrendsR", "likert", "forecast", "pageviews", "AnomalyDetection", "gganimate", "gtrendsR", "qdapDictionaries", "qdapRegex", "qdapTools", "qdap")
+list.of.packages <- c("Rgraphviz", "gtrendsR", "likert",  "pageviews", "AnomalyDetection", "gganimate", "gtrendsR", "qdapDictionaries", "qdapRegex", "qdapTools", "qdap")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) {
   require(devtools)
   install_github("jbryer/likert")
-  install_github("robjhyndman/forecast")
+  #install_github("robjhyndman/forecast")
   install_github("ironholds/pageviews")
   install_github("twitter/AnomalyDetection")
   install_github("dgrtwo/gganimate")
