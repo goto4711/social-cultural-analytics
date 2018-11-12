@@ -18,7 +18,7 @@ ipak("tidyverse")
 #Replace whitespace + \ with ",
 #Switch to grep mode and replace \n with empty space
 
-course_packages <- c("GISTools", "OpenStreetMap", "NeuralNetTools", "NeuralNetTools", "RColorBrewer", "RedditExtractoR", "Rfacebook", "XML", "arules", "catdata", "cluster", "corrplot", "devtools", "dplyr", "fitdistrplus", "forecast", "gapminder", "ggmap", "ggplot2", "ggraph", "ggrepel", "ggvis", "googleVis", "graphTweets", "gsheet", "gtrendsR", "gutenbergr", "httr", "imputeTS", "igraph", "jpeg", "jsonlite", "lubridate", "magrittr", "maps", "nnet", "pageviews", "plotly", "quanteda", "raster", "recommenderlab", "reshape2", "rpart", "rtweet", "rworldmap", "shiny", "spatstat", "swirl", "tidytext", "tm", "tmap", "topicmodels", "twitteR", "wikipediatrend", "wordcloud", "xts", "MASS", "mlogit", "caret", "survival")
+course_packages <- c("caret", "GISTools", "OpenStreetMap", "NeuralNetTools", "NeuralNetTools", "RColorBrewer", "RedditExtractoR", "Rfacebook", "XML", "arules", "catdata", "cluster", "corrplot", "devtools", "dplyr", "fitdistrplus", "forecast", "gapminder", "ggmap", "ggplot2", "ggraph", "ggrepel", "ggvis", "googleVis", "graphTweets", "gsheet", "gtrendsR", "gutenbergr", "httr", "imputeTS", "igraph", "jpeg", "jsonlite", "lubridate", "magrittr", "maps", "nnet", "pageviews", "plotly", "quanteda", "raster", "recommenderlab", "reshape2", "rpart", "rtweet", "rworldmap", "shiny", "spatstat", "swirl", "tidytext", "tm", "tmap", "topicmodels", "twitteR", "wikipediatrend", "wordcloud", "xts", "MASS", "mlogit", "caret", "survival")
 
 ipak(course_packages)
 
